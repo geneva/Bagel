@@ -3,6 +3,10 @@ import PackageDescription
 
 let package = Package(
     name: "Bagel",
+    platforms: [
+        .iOS(.v9),
+        .macOS(.v10_10),
+    ],
     products: [
         .library(name: "Bagel", targets: ["Bagel"])
     ],
@@ -13,7 +17,8 @@ let package = Package(
         .target(
             name: "Bagel",
             dependencies: ["CocoaAsyncSocket"],
-            path: "iOS/Source"
+            path: "iOS/Source",
+            publicHeadersPath: ""
         )
     ]
 )
