@@ -18,7 +18,7 @@ let package = Package(
             name: "Bagel",
             dependencies: ["CocoaAsyncSocket"],
             path: "iOS/Source",
-            publicHeadersPath: ""
+            publicHeadersPath: "iOS/Source/Public"
         )
     ]
 )
