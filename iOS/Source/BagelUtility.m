@@ -19,7 +19,11 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "BagelUtility.h"
+@import Foundation;
+
+#if TARGET_OS_IOS
+@import UIKit;
+#endif
 
 @implementation BagelUtility
 
@@ -40,16 +44,24 @@
 
 + (NSString*)deviceName
 {
+#if TARGET_OS_IOS
     return [UIDevice currentDevice].name;
+#else
+    return [[NSHost currentHost] localizedName];
+#endif
 }
 
 + (NSString*)deviceDescription
 {
-    NSString* information = @"";
+    NSString* information = nil;
 
+#if TARGET_OS_IOS
     information = [UIDevice currentDevice].model;
     information = [NSString stringWithFormat:@"%@ %@", information, [UIDevice currentDevice].systemName];
     information = [NSString stringWithFormat:@"%@ %@", information, [UIDevice currentDevice].systemVersion];
+#else
+    information = [[NSProcessInfo processInfo] operatingSystemVersionString];
+#endif
 
     return information;
 }
