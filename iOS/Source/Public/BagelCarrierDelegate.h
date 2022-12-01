@@ -19,7 +19,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "BagelRequestPacket.h"
+#import "../BagelRequestPacket.h"
 
 @protocol BagelCarrierDelegate <NSObject>
 
@@ -28,7 +28,7 @@
 /**
  Called right before Bagel sends a request packet to the Mac app.
  Allows your delegate to modify the packet on the fly, or abort the operation.
- 
+
  Return a modified request packet, or nil if you want to filter it out.
  */
 - (nullable BagelRequestPacket*)bagelCarrierWillSendRequest:(nonnull BagelRequestPacket*)request;

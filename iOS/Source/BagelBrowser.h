@@ -20,7 +20,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
-#import "BagelConfiguration.h"
+#import "Public/BagelConfiguration.h"
 #import "BagelRequestPacket.h"
 
 @import CocoaAsyncSocket;
@@ -37,4 +37,3 @@
 - (void)sendPacket:(BagelRequestPacket*)packet;
 
 @end
-

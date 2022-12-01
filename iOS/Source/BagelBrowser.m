@@ -20,7 +20,7 @@
 // THE SOFTWARE.
 
 #import "BagelBrowser.h"
-#import "BagelConfiguration.h"
+#import "Public/BagelConfiguration.h"
 
 @implementation BagelBrowser {
     NSMutableArray* sockets;
@@ -118,17 +118,17 @@
     }
 
     if (packetData) {
-        
+
         NSMutableData* buffer = [[NSMutableData alloc] init];
-        
+
         uint64_t headerLength = [packetData length];
         [buffer appendBytes:&headerLength length:sizeof(uint64_t)];
         [buffer appendBytes:[packetData bytes] length:[packetData length]];
-        
+
         for (GCDAsyncSocket* socket in sockets) {
             [socket writeData:buffer withTimeout:-1.0 tag:0];
         }
-        
+
     }
 }
 

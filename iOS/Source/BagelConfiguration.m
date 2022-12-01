@@ -19,9 +19,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "BagelConfiguration.h"
-#import "BagelProjectModel.h"
-#import "BagelDeviceModel.h"
+#import "Public/BagelConfiguration.h"
+#import "Public/BagelProjectModel.h"
+#import "Public/BagelDeviceModel.h"
 #import "BagelUtility.h"
 
 static BagelConfiguration* defaultConfiguration;
@@ -31,13 +31,13 @@ static BagelConfiguration* defaultConfiguration;
 - (instancetype)init
 {
     self = [super init];
-    
+
     if (self)
     {
         self.project = [[BagelProjectModel alloc] init];
         self.device = [[BagelDeviceModel alloc] init];
     }
-    
+
     return self;
 }
 

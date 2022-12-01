@@ -20,7 +20,6 @@
 // THE SOFTWARE.
 
 #import "BagelURLSessionInjector.h"
-#import "Bagel.h"
 #include <objc/runtime.h>
 
 @implementation BagelURLSessionInjector
@@ -43,7 +42,7 @@
  - (void)_didReceiveData:(id)arg1;
  - (void)_didReceiveResponse:(id)arg1 sniff:(bool)arg2; // ~> iOS 12
  - (void)_didReceiveResponse:(id)arg1 sniff:(bool)arg2 rewrite:(bool)arg3; // iOS 13
- 
+
  https://github.com/JackRostron/iOS8-Runtime-Headers
  https://github.com/ksenks/iOS9-Runtime-Headers
  https://github.com/JaviSoto/iOS10-Runtime-Headers

@@ -20,8 +20,8 @@
 // THE SOFTWARE.
 
 #import "BagelBaseModel.h"
-#import "BagelProjectModel.h"
-#import "BagelDeviceModel.h"
+#import "Public/BagelProjectModel.h"
+#import "Public/BagelDeviceModel.h"
 #import "BagelRequestInfo.h"
 
 @interface BagelRequestPacket : NSObject <BagelBaseModelProtocol>
